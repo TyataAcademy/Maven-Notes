@@ -1,0 +1,66 @@
+Welcome to the Maven-Notes wiki!
+
+## POM Execution: 
+We create pom file to in order to run some build job. The default tag is used to run specific build job for given pom and project. But if you want to add additional build job under same pom file you will need to add profiles tag and do the appropriate configuration. Below is the example of that. More update will be coming soon.
+```xml
+ <build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.5.0</version>
+				<executions>
+					<execution>
+						<phase>site</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>com.companyname.projectname.rts.tools.RateTableConverter</mainClass>
+					<arguments>
+						<argument>${baseline}</argument>
+						<argument>${rtsUser}</argument>
+						<argument>${rtsPassword}</argument>
+						<argument>${rtsUrl}</argument>
+						<argument>${rtsBranch}</argument>						
+					</arguments>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<profiles>
+		<profile>
+			<id>idmethod-converter</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.5.0</version>
+						<executions>
+							<execution>
+								<phase>test</phase>
+								<goals>
+									<goal>java</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<mainClass>com.companyname.projectname.rts.tools.IdMethodConverter</mainClass>
+							<arguments>
+								<argument>${baseline}</argument>
+								<argument>${rtsUser}</argument>
+								<argument>${rtsPassword}</argument>
+								<argument>${rtsUrl}</argument>
+								<argument>${rtsBranch}</argument>										
+							</arguments>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+  </project>
+```
