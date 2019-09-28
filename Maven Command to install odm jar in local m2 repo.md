@@ -1,8 +1,10 @@
-Inorder to install jar/rar file into .m2 repo in our local.
+## Maven Command to install odm jar in local m2 repo
+
+### Inorder to install jar/rar file into .m2 repo in our local.
 
 Here are example commands we can used. 
-mvn install:install-file -Dpackaging=jar -DgroupId=com.ilog.jrules -DartifactId=asm -Dversion=5.2 -Dfile=C:\new_jars\jrules\asm-5.2.jar
-mvn install:install-file -Dpackaging=jar -DgroupId=com.ilog.jrules -DartifactId=asm-commons -Dversion=5.2 -Dfile=C:\new_jars\jrules\asm-commons-5.2.jar
+'mvn install:install-file -Dpackaging=jar -DgroupId=com.ilog.jrules -DartifactId=asm -Dversion=5.2 -Dfile=C:\new_jars\jrules\asm-5.2.jar'
+`mvn install:install-file -Dpackaging=jar -DgroupId=com.ilog.jrules -DartifactId=asm-commons -Dversion=5.2 -Dfile=C:\new_jars\jrules\asm-commons-5.2.jar`
 mvn install:install-file -Dpackaging=jar -DgroupId=com.ilog.jrules -DartifactId=asm-tree -Dversion=5.2 -Dfile=C:\new_jars\jrules\asm-tree-5.2.jar
 mvn install:install-file -Dpackaging=jar -DgroupId=com.ilog.jrules -DartifactId=jrules-engine -Dversion=8.9.2.1 -Dfile=C:\new_jars\jrules\jrules-engine-8.9.2.1.jar
 mvn install:install-file -Dpackaging=jar -DgroupId=com.ilog.executionserver -DartifactId=jrules-res-session-java -Dversion=8.9.2.1 -Dfile=C:\new_jars\executionserver\jrules-res-session-java-8.9.2.1.jar
