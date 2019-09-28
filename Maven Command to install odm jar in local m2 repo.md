@@ -14,6 +14,7 @@
 
 Below is one of the example I ran to install jrules-res-xu-WAS85 jar in my local .m2 repo.
 
+```
 C:\>mvn install:install-file -Dpackaging=rar -DgroupId=com.ilog.executionserver -DartifactId=jrules-res-xu-WAS85 -Dversion=8.9.2.1_B -Dfile=C:\new_jars\rules\jrules-res-xu-WAS85-8.9.2.1_B.rar
 [INFO] Scanning for projects...
 [INFO]
@@ -32,4 +33,4 @@ C:\>mvn install:install-file -Dpackaging=rar -DgroupId=com.ilog.executionserver 
 [INFO] Final Memory: 6M/245M
 [INFO] ------------------------------------------------------------------------
 C:\>
-
+```
