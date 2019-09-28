@@ -1,5 +1,5 @@
 ### Maven Command to install odm jar in local m2 repo
-
+term
 : Inorder to install jar/rar file into .m2 repo in our local.**
 
 : Here are example commands we can used. 
